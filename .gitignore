@@ -1,0 +1,8 @@
+# Archivos de entorno y credenciales
+.env
+*.env
+.env.*
+.env.example
+
+# Dependencias
+node_modules/
