@@ -1,0 +1,52 @@
+{
+  "realm": "tarea1-realm",
+  "enabled": true,
+  "sslRequired": "none",
+  "roles": {
+    "realm": [
+      { "name": "jugador", "description": "Puede crear sus propias partidas" },
+      { "name": "coach", "description": "Puede editar y eliminar cualquier partida" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "tarea1-app",
+      "enabled": true,
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false,
+      "redirectUris": ["http://localhost:8000/*", "http://localhost:8080/*"],
+      "webOrigins": ["*"]
+    }
+  ],
+  "users": [
+    {
+      "username": "player1",
+      "enabled": true,
+      "emailVerified": true,
+      "email": "player1@tarea1.local",
+      "firstName": "Player",
+      "lastName": "One",
+      "requiredActions": [],
+      "credentials": [
+        { "type": "password", "value": "player123", "temporary": false }
+      ],
+      "realmRoles": ["jugador"]
+    },
+    {
+      "username": "coach1",
+      "enabled": true,
+      "emailVerified": true,
+      "email": "coach1@tarea1.local",
+      "firstName": "Coach",
+      "lastName": "One",
+      "requiredActions": [],
+      "credentials": [
+        { "type": "password", "value": "coach123", "temporary": false }
+      ],
+      "realmRoles": ["coach"]
+    }
+  ]
+}
