@@ -1,7 +1,6 @@
 # Archivos de entorno y credenciales
 .env
-*.env
-.env.*
+
 
 # Dependencias
 node_modules/
